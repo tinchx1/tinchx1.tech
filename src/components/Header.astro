@@ -1,28 +1,29 @@
 ---
-import ThemeToggle from "./ThemeToggle.astro"
-
+import ThemeToggle from "./ThemeToggle.astro";
+import i18next, { t, setDefaultNamespace } from "i18next";
+setDefaultNamespace("home.header");
 const navItems = [
   {
-    title: "Experiencia",
-    label: "experiencia",
+    title: t("experiencia.title"),
+    label: t("experiencia.label"),
     url: "/#experiencia",
   },
   {
-    title: "Proyectos",
-    label: "proyectos",
+    title: t("proyectos.title"),
+    label: t("proyectos.label"),
     url: "/#proyectos",
   },
   {
-    title: "Sobre mí",
-    label: "sobre-mi",
+    title: t("sobre-mi.title"),
+    label: t("sobre-mi.label"),
     url: "/#sobre-mi",
   },
   {
-    title: "Contacto",
-    label: "contacto",
-    url: "mailto:miduga@gmail.com",
+    title: t("contacto.title"),
+    label: t("contacto.label"),
+    url: "mailto:workspacetinchx1@gmail.com",
   },
-]
+];
 ---
 
 <header
@@ -34,7 +35,7 @@ const navItems = [
     {
       navItems.map((link) => (
         <a
-          class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
+          class="relative block px-2 py-2 transition hover:text-cyan-500 dark:hover:text-cyan-500"
           aria-label={link.label}
           href={link.url}
         >
@@ -48,44 +49,44 @@ const navItems = [
 
 <script>
   document.addEventListener("astro:page-load", () => {
-    const sections = document.querySelectorAll("section")
-    const navItems = document.querySelectorAll("header nav a")
+    const sections = document.querySelectorAll("section");
+    const navItems = document.querySelectorAll("header nav a");
 
     const callback = (entries: any[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           navItems.forEach((item) => {
             if (item.getAttribute("aria-label") == entry.target.id) {
-              item.classList.add("text-yellow-500")
+              item.classList.add("text-cyan-500");
             } else {
-              item.classList.remove("text-yellow-500")
+              item.classList.remove("text-cyan-500");
             }
-          })
+          });
         }
-      })
-    }
+      });
+    };
 
     const observer = new IntersectionObserver(callback, {
       root: null,
       rootMargin: "0px",
       threshold: 0.3,
-    })
+    });
 
     sections.forEach((section) => {
-      observer.observe(section)
-    })
+      observer.observe(section);
+    });
 
     // Cleanup function
     document.onvisibilitychange = () => {
       if (document.visibilityState === "hidden") {
-        observer.disconnect()
+        observer.disconnect();
       } else {
         sections.forEach((section) => {
-          observer.observe(section)
-        })
+          observer.observe(section);
+        });
       }
-    }
-  })
+    };
+  });
 </script>
 
 <style>

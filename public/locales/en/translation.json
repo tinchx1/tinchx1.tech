@@ -1,0 +1,22 @@
+  {
+    "home": {
+      "header": {
+        "experiencia": {
+          "title": "Experiencia",
+          "label": "experiencia"
+        },
+        "proyectos": {
+          "title": "Proyectos",
+          "label": "proyectos"
+        },
+        "sobre-mi": {
+          "title": "Sobre mí",
+          "label": "sobre-mi"
+        },
+        "contacto": {
+          "title": "Contacto",
+          "label": "contacto"
+        }
+      }
+    }
+  }
