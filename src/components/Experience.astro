@@ -1,28 +1,27 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro";
+import * as m from "../paraglide/messages.js";
+
 const EXPERIENCIE = [
   {
-    date: "Actualmente....",
-    title: "Analista TIC",
+    date: m.home_experience_analist_date(),
+    title: m.home_experience_analist_title(),
     company: "UNLP",
-    description:
-      "Analista en Tecnologías de la Información y la Comunicación se trata de una carrera de corta duración que posibilita una salida laboral rápida. La titulación tiene orientaciones que buscan focalizar temas de la demanda de las empresas. He aprobado 15 de 24 asignaturas, lo que demuestra un progreso significativo en la carrera.",
+    description: m.home_experience_analist_description(),
     link: "https://www.info.unlp.edu.ar/analista-en-tic/",
   },
   {
     date: "2024",
-    title: "Curso Full Stack",
-    company: "FullStackOpen",
-    description:
-      "En este curso, desarrollado por FullStackOpen, adquirí conocimientos avanzados en desarrollo Full Stack, incluyendo tecnologías modernas como React, Node.js, y bases de datos NoSQL.",
+    title: m.home_experience_fullstack_title(),
+    company: m.home_experience_fullstack_company(),
+    description: m.home_experience_fullstack_description(),
     link: "https://github.com/tinchx1/",
   },
   {
     date: "2023",
-    title: "Curso de Desarrollo Web",
+    title: m.home_experience_webdev_title(),
     company: "The Oding Project",
-    description:
-      "Completé este curso para desarrollar habilidades en HTML, CSS, JavaScript y herramientas de control de versiones como Git. El curso incluyó varios proyectos prácticos que puedes revisar en mi repositorio de GitHub, demostrando mi capacidad para crear aplicaciones web funcionales y bien diseñadas.",
+    description: m.home_experience_webdev_description(),
     link: "https://github.com/tinchx1/Curso_Odin-Project",
   },
 ];

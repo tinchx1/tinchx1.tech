@@ -1,5 +1,6 @@
 ---
 const currentYear = new Date().getFullYear();
+import * as m from "../paraglide/messages.js";
 ---
 
 <footer
@@ -11,22 +12,24 @@ const currentYear = new Date().getFullYear();
     <span
       class="text-sm sm:text-center pr-8 text-zinc-800/90 dark:text-zinc-200/90"
       >© {currentYear}
-      Martin Marchionni. Casi todos los derechos reservados. Inspirado en <a
-        href="https://github.com/midudev/porfolio.dev"
-        class="hover:underline">midudev</a
+      Martin Marchionni. {m.footer_text()}
+      <a href="https://github.com/midudev/porfolio.dev" class="hover:underline"
+        >midudev</a
       >
     </span>
     <ul
       class="flex flex-wrap items-center mt-3 text-sm font-medium dark:text-white/90 sm:mt-0"
     >
       <li>
-        <a href="/#sobre-mi" class="hover:underline me-4 md:me-6">Sobre mí</a>
+        <a href="/#sobre-mi" class="hover:underline me-4 md:me-6"
+          >{m.footer_sobre_mi}</a
+        >
       </li>
       <li>
         <a
           id="contacto"
           href="mailto:workspacetinchx1@gmail.com"
-          class="hover:underline">Contacto</a
+          class="hover:underline">{m.footer_contacto}</a
         >
       </li>
     </ul>

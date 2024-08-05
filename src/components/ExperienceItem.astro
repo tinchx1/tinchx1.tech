@@ -10,6 +10,7 @@ interface Props {
 }
 
 const { title, company, description, link, date } = Astro.props;
+import * as m from "../paraglide/messages.js";
 ---
 
 <div
@@ -37,7 +38,7 @@ const { title, company, description, link, date } = Astro.props;
     {
       link && (
         <LinkInline href={link}>
-          Saber más{" "}
+          {m.home_experienceItem_more}{" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="w-5 icon icon-tabler icon-tabler-chevron-right"

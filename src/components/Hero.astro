@@ -5,6 +5,7 @@ import LinkedInIcon from "@/components/icons/LinkedIn.astro";
 import MailIcon from "@/components/icons/Mail.astro";
 import SocialPill from "@/components/SocialPill.astro";
 import GitHub from "./icons/GitHub.astro";
+import * as m from "../paraglide/messages.js";
 ---
 
 <div class="max-w-xl">
@@ -20,26 +21,28 @@ import GitHub from "./icons/GitHub.astro";
       rel="noopener"
       class="flex items-center transition md:justify-center md:hover:scale-105"
     >
-      <Badge>Disponible para trabajar</Badge>
+      <Badge> {m.hero_about_me_available} </Badge>
     </a>
   </div>
   <h1
     class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
   >
-    Hey, soy martin
+    {m.hero_about_me_heading}
   </h1>
   <p
     class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-cyan-500 [&>strong]:text-cyan-500 [&>strong]:font-semibold dark:text-gray-300"
   >
-    Estudiante <strong>Analista TIC </strong> en la UNLP de Informática y especializado
-    en el desarrollo de <strong>
-      Aplicaciones Web Únicas y Optimización SEO
-    </strong> con las Últimas Tecnologías
+    {m.hero_about_me_description}
+    <strong>{m.hero_about_me_description_strong1} </strong>
+    {m.hero_about_me_description_end}<strong>
+      {m.hero_about_me_specialization_strong}
+    </strong>
+    {m.hero_about_me_specialization_end}
   </p>
   <nav class="flex flex-wrap gap-4 mt-8">
     <SocialPill href="mailto:workspacetinchx1@gmail.com">
       <MailIcon class="size-4" />
-      Contáctame
+      {m.hero_contact_me}
     </SocialPill>
     <SocialPill href="https://linkedin.com/in/martin-marchionni-16104127a">
       <LinkedInIcon class="size-4" />

@@ -1,26 +1,26 @@
 ---
 import ThemeToggle from "./ThemeToggle.astro";
-import i18next, { t, setDefaultNamespace } from "i18next";
-setDefaultNamespace("home.header");
+import * as m from "../paraglide/messages.js";
+
 const navItems = [
   {
-    title: t("experiencia.title"),
-    label: t("experiencia.label"),
+    title: m.home_header_experiencia_title(),
+    label: m.home_header_experiencia_label(),
     url: "/#experiencia",
   },
   {
-    title: t("proyectos.title"),
-    label: t("proyectos.label"),
+    title: m.home_header_proyectos_title(),
+    label: m.home_header_proyectos_label(),
     url: "/#proyectos",
   },
   {
-    title: t("sobre-mi.title"),
-    label: t("sobre-mi.label"),
+    title: m.home_header_sobre_mi_title(),
+    label: m.home_header_sobre_mi_label(),
     url: "/#sobre-mi",
   },
   {
-    title: t("contacto.title"),
-    label: t("contacto.label"),
+    title: m.home_header_contacto_title(),
+    label: m.home_header_contacto_label(),
     url: "mailto:workspacetinchx1@gmail.com",
   },
 ];

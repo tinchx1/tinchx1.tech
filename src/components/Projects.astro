@@ -6,6 +6,7 @@ import Link from "./icons/Link.astro";
 import LinkButton from "./LinkButton.astro";
 import MongoDB from "./icons/MongoDB.astro";
 import Express from "./icons/Express.astro";
+import * as m from "../paraglide/messages.js";
 
 const TAGS = {
   NEXT: {
@@ -31,18 +32,16 @@ const TAGS = {
 };
 const PROJECTS = [
   {
-    title: "TalkSmart - Un chat con ia para hablar otros idiomas",
-    description:
-      "Este chat ofrece traducción instantánea y explicación de contexto con IA, utilizando tecnologías como Next.js, React, Tailwind CSS, Node.js, Express, MongoDB, Next-Auth, Next-intl, cloudflare, Socket.io y Popperjs.",
+    title: m.home_projects_title1,
+    description: m.home_projects_description1,
     link: "https://www.talksmart.app/",
     github: "",
     image: "/projects/talksmart.webp",
     tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.MONGODB, TAGS.EXPRESS],
   },
   {
-    title: "Blogs SEO - +200 blogs en diferentes proyectos",
-    description:
-      "He creado más de 200 blogs en distintos proyectos, aplicando SEO avanzado para atraer tráfico cualificado y mejorar la visibilidad en línea.",
+    title: m.home_projects_title2,
+    description: m.home_projects_description2,
     link: "https://www.talksmart.app/en/blog",
     image: "/projects/blog.webp",
     tags: [],
