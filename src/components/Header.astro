@@ -1,27 +1,22 @@
 ---
 import ThemeToggle from "./ThemeToggle.astro";
 import * as m from "../paraglide/messages.js";
-
+const locale = Astro.url.toString().split("/")[1];
 const navItems = [
   {
     title: m.home_header_experiencia_title(),
     label: m.home_header_experiencia_label(),
-    url: "/#experiencia",
+    url: `${locale}#experiencia`,
   },
   {
     title: m.home_header_proyectos_title(),
     label: m.home_header_proyectos_label(),
-    url: "/#proyectos",
+    url: `${locale}#proyectos`,
   },
   {
     title: m.home_header_sobre_mi_title(),
     label: m.home_header_sobre_mi_label(),
-    url: "/#sobre-mi",
-  },
-  {
-    title: m.home_header_contacto_title(),
-    label: m.home_header_contacto_label(),
-    url: "mailto:workspacetinchx1@gmail.com",
+    url: `${locale}#sobre-mi`,
   },
 ];
 ---
@@ -43,6 +38,14 @@ const navItems = [
         </a>
       ))
     }
+    <select
+      id="locale-select"
+      class="relative bg-transparent block px-1 py-2 outline-none transition hover:text-cyan-500 dark:hover:text-cyan-500"
+      onchange="window.location.href = this.value"
+    >
+      <option value="es">ES</option>
+      <option value="eng">EN</option>
+    </select>
     <ThemeToggle />
   </nav>
 </header>
@@ -86,6 +89,14 @@ const navItems = [
         });
       }
     };
+  });
+  document.addEventListener("astro:page-load", () => {
+    const selectElement = document.getElementById(
+      "locale-select",
+    ) as HTMLSelectElement;
+    if (selectElement) {
+      selectElement.value = window.location.pathname.split("/")[1];
+    }
   });
 </script>
 
