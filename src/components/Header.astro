@@ -41,7 +41,7 @@ const navItems = [
     <select
       id="locale-select"
       class="relative bg-transparent block px-1 py-2 outline-none transition hover:text-cyan-500 dark:hover:text-cyan-500"
-      onchange="window.location.href = this.value"
+      onchange="changeLocale(this.value)"
     >
       <option value="es">ES</option>
       <option value="eng">EN</option>
@@ -51,6 +51,28 @@ const navItems = [
 </header>
 
 <script>
+  declare global {
+    interface Window {
+      changeLocale: (value: string) => void;
+    }
+  }
+
+  window.changeLocale = function (value: string) {
+    const currentUrl = window.location.pathname;
+    const pathParts = currentUrl.split("/").filter(Boolean);
+
+    if (
+      pathParts.length > 0 &&
+      (pathParts[0] === "es" || pathParts[0] === "eng")
+    ) {
+      pathParts[0] = value; // Reemplaza el locale
+    } else {
+      pathParts.unshift(value); // Añade el locale al principio si no está presente
+    }
+
+    const newPath = `/${pathParts.join("/")}${window.location.search}${window.location.hash}`;
+    window.location.href = newPath;
+  };
   document.addEventListener("astro:page-load", () => {
     const sections = document.querySelectorAll("section");
     const navItems = document.querySelectorAll("header nav a");
