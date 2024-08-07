@@ -17,5 +17,4 @@ export default defineConfig({
     outdir: "./src/paraglide",
   })
   ],
-  site: 'https://tinchx1.tech/'
 })
