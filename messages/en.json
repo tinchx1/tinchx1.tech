@@ -34,6 +34,8 @@
     "home_projects_description1": "This chat offers instant translation and contextual explanation with AI, using technologies such as Next.js, React, Tailwind CSS, Node.js, Express, MongoDB, Next-Auth, Next-intl, Cloudflare, Socket.io, and Popperjs.",
     "home_projects_title2": "SEO Blogs - Over 200 blogs in different projects",
     "home_projects_description2": "I have created over 200 blogs in various projects, applying advanced SEO to attract qualified traffic and improve online visibility.",
+    "home_projects_title3": "Trackiify - Routine Manager for Trainers",
+    "home_projects_description3": "I created an application for trainers that allows them to assign and manage personalized routines for their clients. Users can follow the routines via WhatsApp or the web platform.",
     "hero_about_me_available": "Available for work",
     "hero_about_me_heading": "Hey, I'm Martin",
     "hero_about_me_description": "Student",
