@@ -6,6 +6,8 @@ import Link from "./icons/Link.astro";
 import LinkButton from "./LinkButton.astro";
 import MongoDB from "./icons/MongoDB.astro";
 import Express from "./icons/Express.astro";
+import Nestjs from "./icons/Nestjs.astro";
+import Postgressql from "./icons/Postgressql.astro";
 import * as m from "../paraglide/messages.js";
 
 const TAGS = {
@@ -29,6 +31,16 @@ const TAGS = {
     class: "bg-[#000000] text-white",
     icon: Express,
   },
+  NESTJS: {
+    name: "NestJS",
+    class: "bg-[#E0234E] text-white",
+    icon: Nestjs,
+  },
+  POSTGRESQL: {
+    name: "PostgreSQL",
+    class: "bg-[#336791] text-white",
+    icon: Postgressql,
+  },
 };
 const PROJECTS = [
   {
@@ -46,6 +58,14 @@ const PROJECTS = [
     github: "",
     image: "/projects/trackiify.webp",
     tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.MONGODB, TAGS.EXPRESS],
+  },
+  {
+    title: m.home_projects_title3,
+    description: m.home_projects_description3,
+    link: "https://habitifytracker.vercel.app/",
+    github: "",
+    image: "/projects/habit-tracker.png",
+    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.NESTJS, TAGS.POSTGRESQL],
   },
   {
     title: m.home_projects_title2,

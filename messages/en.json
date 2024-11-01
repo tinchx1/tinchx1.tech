@@ -36,6 +36,8 @@
     "home_projects_description2": "I have created over 200 blogs in various projects, applying advanced SEO to attract qualified traffic and improve online visibility.",
     "home_projects_title3": "Trackiify - Routine Manager for Trainers",
     "home_projects_description3": "I created an application for trainers that allows them to assign and manage personalized routines for their clients. Users can follow the routines via WhatsApp or the web platform.",
+    "home_projects_title4": "Habit Tracker - Build and maintain healthy life",
+    "home_projects_description4": "Developed a habit tracker app designed to help users build and maintain healthy routines. The project involved creating a seamless front-end with Next.js and a robust back-end with NestJS, leveraging PostgreSQL as the database, and Prisma as the ORM for efficient data handling.",
     "hero_about_me_available": "Available for work",
     "hero_about_me_heading": "Hey, I'm Martin",
     "hero_about_me_description": "Student",
