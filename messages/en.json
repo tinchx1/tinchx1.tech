@@ -31,7 +31,7 @@
     "home_experience_webdev_description": "I completed this course to develop skills in HTML, CSS, JavaScript, and version control tools like Git. The course included several practical projects that you can review in my GitHub repository, demonstrating my ability to create functional and well-designed web applications.",
     "home_experienceItem_more": "Learn more",
     "home_projects_title1": "TalkSmart - A chat with AI for speaking other languages",
-    "home_projects_description1": "This chat offers instant translation and contextual explanation with AI, using technologies such as Next.js, React, Tailwind CSS, Node.js, Express, MongoDB, Next-Auth, Next-intl, Cloudflare, Socket.io, and Popperjs.",
+    "home_projects_description1": "This chat offers instant translation and contextual explanation with AI, using technologies such as Next.js, React, Tailwind CSS, Node.js, Express, MongoDB, Next-Auth, Next-intl, Cloudflare, Socket.io, and Playwright ETE testing.",
     "home_projects_title2": "SEO Blogs - Over 200 blogs in different projects",
     "home_projects_description2": "I have created over 200 blogs in various projects, applying advanced SEO to attract qualified traffic and improve online visibility.",
     "home_projects_title3": "Trackiify - Routine Manager for Trainers",
