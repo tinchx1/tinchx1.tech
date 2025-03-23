@@ -10,6 +10,8 @@ import Projects from "@/components/Projects.astro";
 import SectionContainer from "@/components/SectionContainer.astro";
 import Hero from "@/components/Hero.astro";
 import * as m from "../../paraglide/messages.js";
+import Briefcase from "@/components/icons/Briefcase.astro";
+import Courses from "@/components/Courses.astro";
 ---
 
 <Layout
@@ -22,33 +24,42 @@ import * as m from "../../paraglide/messages.js";
     </SectionContainer>
   </main>
   <div class="space-y-24 px-4">
-    <SectionContainer id="proyectos">
-      <h2
-        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
-      >
-        <CodeIcon class="size-7" />
-        {m.home_title_proyectos}
-      </h2>
-      <Projects />
-    </SectionContainer>
     <SectionContainer id="experiencia">
       <h2
         class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
       >
-        <Book class="size-8" />
-        {m.home_title_estudios}
+        <Briefcase class="size-8" />
+        {m.home_experience_title}
       </h2>
       <Experience />
-    </SectionContainer>
+      <SectionContainer id="proyectos">
+        <h2
+          class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+        >
+          <CodeIcon class="size-7" />
+          {m.home_title_proyectos}
+        </h2>
+        <Projects />
+      </SectionContainer>
+      <SectionContainer id="experiencia">
+        <h2
+          class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+        >
+          <Book class="size-8" />
+          {m.home_title_estudios}
+        </h2>
+        <Courses />
+      </SectionContainer>
 
-    <SectionContainer id="sobre-mi">
-      <h2
-        class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
-      >
-        <ProfileCheck class="size-8" />
-        Sobre mí
-      </h2>
-      <AboutMe />
+      <SectionContainer id="sobre-mi">
+        <h2
+          class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
+        >
+          <ProfileCheck class="size-8" />
+          Sobre mí
+        </h2>
+        <AboutMe />
+      </SectionContainer>
     </SectionContainer>
   </div>
 </Layout>

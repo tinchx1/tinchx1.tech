@@ -1,0 +1,38 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+import * as m from "../paraglide/messages.js";
+
+const COURSES = [
+  {
+    date: m.home_experience_analist_date(),
+    title: m.home_experience_analist_title(),
+    company: "UNLP",
+    description: m.home_experience_analist_description(),
+    link: "https://www.info.unlp.edu.ar/analista-en-tic/",
+  },
+  {
+    date: "2024",
+    title: m.home_experience_fullstack_title(),
+    company: m.home_experience_fullstack_company(),
+    description: m.home_experience_fullstack_description(),
+    link: "https://github.com/tinchx1/",
+  },
+  {
+    date: "2023",
+    title: m.home_experience_webdev_title(),
+    company: "The Oding Project",
+    description: m.home_experience_webdev_description(),
+    link: "https://github.com/tinchx1/Curso_Odin-Project",
+  },
+];
+---
+
+<ol class="relative m-16">
+  {
+    COURSES.map((experiencie) => (
+      <li class="">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
